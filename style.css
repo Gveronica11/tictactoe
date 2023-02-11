@@ -1,0 +1,63 @@
+* {
+    font-family: 'Baloo 2', cursive;
+    color: #1ad8e5
+}
+
+main {
+    display: grid;
+    grid-template: repeat(3, 1fr)/ repeat- (3, 1fr);
+    width: 60vh;
+    height: 60vh;
+}
+
+
+.cell {
+    width: 20vh;
+    height: 20vh;
+    text-align: center;
+    font-size: 12vh;
+    display: grid;
+    place-items: center;
+}
+
+.cell:nth-child(3n+2) {
+    border-right:3px solid #f39b95;
+    border-left:3px solid #f39b95;
+}
+
+.cell:nthchild(n + 4):nth-child(-n + 6) {
+    border-top: 3px solid #f39b95;
+    border-bottom: 3px solid #f39b95;
+}
+
+.hidden{
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+body > * {
+    margin-bottom: 2rem;
+}
+
+.player {
+    font-weight: bold;
+    color: #e5271a;
+    border-radius: 0.2rem;
+}
+
+#player-turn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart {
+    border-radius: 0.2rem;
+}
